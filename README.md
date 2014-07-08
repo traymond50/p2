@@ -1,6 +1,6 @@
 P2: XKCD Password Generator
 
-Live URL: http://p2-traymond.gopagoda.com/
+Live URL: http://p2-traymond.rhcloud.com
 
 DESCRIPTION P2:  create a random password generator similar to one from an xkcd comic.
 

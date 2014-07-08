@@ -64,51 +64,50 @@
     		</div>
   		</div>
 	</form>
-
-
-<div class="row">
-	<div class="col-xs-3"></div>
-	<div class="col-xs-6">
-	<?php
-		//checks to make sure user has entered a proper value
-		if($_POST['wordcount'] < 1 || $_POST['wordcount'] > 20)
-		{
-			echo "<div class='output'>You must pick a number between 1 and 20</div>";
-		}
-		//generates password if user has entered a correct password
-		else
-		{
-			for($i = 0; $i+1 < $_POST['wordcount']; $i++)
+	<div class="row">
+		<div class="col-xs-3"></div>
+		<div class="col-xs-6">
+		<?php
+			//checks to make sure user has entered a proper value
+			if($_POST["wordcount"] < 1 || $_POST["wordcount"] > 20)
 			{
-				$output = $word[rand(0,1074)];
-				//uppercase option
-				if ($_POST['uppercase'] == 'on')
-				{ 
-					echo "<div class='output ".$output."'>".strtoupper($output)."</div>";
-				}
-				//lowercase options
-				else
-				{ 
-					echo "<div class='output ".$output."'>".$output."</div>";
-				}
-				//adds dashes if reqyested
-				echo "<div class='space'>".$space."</div>";
+				echo "<div class='output'>You must pick a number between 1 and 20</div>";
 			}
-			$output = $word[rand(0,1074)];
-			echo "<div class='output ".$output."'>".$output."</div>";
-		}
-		//adds number if requested
-		if($number)
-		{
-			echo "<div class='output ".$output."'>".$number."</div>";
-		}
-		//adds special character if requested
-		if($specialCharacter)
-		{
-			echo "<div class='output ".$output."'>".$specialCharacter."</div>";
-		}
-	?>
+			//generates password if user has entered a correct password
+			else
+			{
+				for($i = 0; $i+1 < $_POST["wordcount"]; $i++)
+				{
+					$output = $word[rand(0,1074)];
+					//uppercase option
+					if ($_POST["uppercase"] == "on")
+					{ 
+						echo "<div class='output ".$output."'>".strtoupper($output)."</div>";
+					}
+					//lowercase options
+					else
+					{ 
+						echo "<div class='output ".$output."'>".$output."</div>";
+					}
+					//adds dashes if reqyested
+					echo "<div class='space'>".$space."</div>";
+				}
+				$output = $word[rand(0,1074)];
+				echo "<div class='output ".$output."'>".$output."</div>";
+			}
+			//adds number if requested
+			if($number)
+			{
+				echo "<div class='output ".$output."'>".$number."</div>";
+			}
+			//adds special character if requested
+			if($specialCharacter)
+			{
+				echo "<div class='output ".$output."'>".$specialCharacter."</div>";
+			}
+		?>
+		</div>
+		<div class="col-xs-3"></div>
 	</div>
-	<div class="col-xs-3"></div>
 </body>
 </html>
